@@ -1,6 +1,7 @@
 import random
 
 import bubble
+import quick
 
 
 class TestSort:
@@ -10,6 +11,14 @@ class TestSort:
         nums = [random.randint(0, 1000) for i in range(10)]
         assert in_order(nums) is False
         sorted_nums = bubble.bubble_sort(nums)
+        assert in_order(sorted_nums) is True
+
+
+    def test_quick_sort(self):
+        
+        nums = [random.randint(0, 1000) for i in range(10)]
+        assert in_order(nums) is False
+        sorted_nums = quick.quick_sort(nums)
         assert in_order(sorted_nums) is True
         
 
